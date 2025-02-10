@@ -1,0 +1,2427 @@
+
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Inter';
+  }
+
+  @font-face { 
+    font-family: Inter;
+    src: url("../fontes/Inter-VariableFont_slnt,wght.ttf");
+  }
+
+  body::-webkit-scrollbar{
+    visibility: hidden;
+    width: 0px;
+  }
+
+  body{
+    background-color: #f5f5f5;
+  }
+
+  .enabled,
+  #userwayAccessibilityIcon{
+    user-select: none;
+  }
+
+
+
+/* ==============================================
+- MENU
+============================================== */
+  header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #49326B;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    top: 0;
+    translate: none;
+    position: sticky;
+    white-space: nowrap;
+    z-index: 500;
+  }
+
+  header .logo{
+    user-select: none;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  header .logo img{
+    height: 95%;
+    margin: 0px 20px;
+  }
+
+  header .logo h2{
+    color: #FF8725;
+    margin: 0px;
+  }
+
+  header ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px 20px;
+    z-index: 1000;
+  }
+
+  header ul li{
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  header ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  *{outline: solsid;}
+
+  .activeLink,
+  header ul li a:hover,
+  header ul li a:focus{
+    font-weight: bold;
+    border-bottom: solid #FF8725;
+  }
+
+  header .menu-btn i{
+    color: whitesmoke;
+    cursor: pointer;
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content,
+  .dropdown-contentAdm {
+    margin: 10px;
+    display: none;
+    position: absolute;
+    background-color: #49326B;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px #474747;
+    z-index: 1500;
+    text-align: center;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:hover .dropdown-contentAdm {
+    display: block;
+  }
+
+  .dropdown-content p,
+  .dropdown-contentAdm p{
+    margin: 15px;
+  }
+
+
+/* ==============================================
+- MENU ADM
+============================================== */
+  .headerAdm{
+    padding: 0 40px 0 40px;
+  }
+
+  .headerAdm .menu-btn i{
+    margin-top: -7px;
+    display: block;
+    float: right;
+  }
+
+  .headerAdm ul{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    background-color: #49326BF9;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin: 0px;
+  }
+
+  .fixando .headerAdm ul{
+    overflow: auto !important;
+    padding-bottom: 50px;
+  }
+
+  .headerAdm ul.open{
+    left: 0;
+  }
+
+  .headerAdm ul li{
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fixandoAdm {
+    animation: fixar .5s linear forwards;
+    visibility: visible;
+  }
+
+  @keyframes fixar {
+    0%{
+      overflow: hidden;
+    }
+
+    100%{
+      overflow: hidden;
+    }
+  }
+
+  .dropdown-contentAdm {
+    background-color: #49326BF9;
+    box-shadow: none;
+  }
+
+
+/* ==============================================
+- PÁGINA HOME
+============================================== */
+
+/* ==============================================
+- ÁREA CARROSSEL HOME
+============================================== */
+  #slider {
+    overflow: hidden;
+    width: 100%; 
+    max-width: 1024px;
+    margin: auto auto;
+    /*height: 37vh; /* 355px */
+  }
+
+  #slider .scroll-container {
+    width: 300%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    left: 0;
+    animation: 10s slider infinite;
+  }
+
+  #slider .scroll-container img {
+    width: 33.3333333333%;
+    height: 100%;
+    float: left;
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+    45% {
+      left: 0;
+    }
+    50% {
+      left: -100%;
+    }
+    95% {
+      left: -100%;
+    }
+    100% {
+      left: -200%;
+    }
+  }
+
+
+
+/* ==============================================
+- ÁREA HISTÓRIA HOME
+============================================== */
+  .historia_home{
+    background: #fff;
+    padding: 50px 15px;
+    margin: 3px 0px;
+  }
+
+  .container-historia_home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .info-historia_home{
+    width: 450px;
+    margin: 10px 50px;
+    padding: 10px 10px;
+  }
+
+  .info-historia_home h1 {
+    color: #FF8725;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 8px 0px;
+  }
+
+  .info-historia_home .title-Hist{
+    font-size: 1.5em;
+    color: #FF8725;
+    margin-bottom: 15px;
+  }
+
+  .info-historia_home p{
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .verHistoria{
+    background-color: #49326B;
+    border: solid #49326B;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: .9em;
+    margin: 15px 0px;
+    padding: 7px 20px;
+  }
+
+  .verHistoria:hover{
+    box-shadow: 0px 4px 15px #49326B99;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .img_historia_home{
+    width: 450px;
+    margin: 0px 25px;
+  }
+
+  .img_historia_home img{
+    width: 100%;
+  }
+
+
+/* ==============================================
+- ÁREA NOTICIAS HOME
+============================================== */
+  .noticias_home{
+    padding: 50px 15px;
+  }
+
+  .noticias_home h1,
+  .eventos_home h1{
+    color: #49326B;
+    text-align: center;
+  }
+
+  .noticias_timeline{
+    width: 100%; 
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  .noticia{
+    min-width: 15%; 
+    background-color: #FFF;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+    transition: .5s;
+  }
+
+  .noticia:hover{
+    box-shadow: 0px 2px 15px #35353569;
+  }
+
+  .noticias_timeline:hover > :not(:hover){
+    transform: scale(0.95);
+  }
+
+  .noticia h2{
+    font-weight: 300;
+    color: #374054;
+  }
+
+  .noticia h3{
+    font-weight: 300;
+    color: #7e8890;
+    padding: 2.5px 0px;
+  }
+
+  .noticia p{
+    color: #74808a;
+    font-size: .9em;
+    padding: 5px 0px;
+  }
+
+  .noticia h2,
+  .noticia h3,
+  .noticia p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btnAcesse {
+    color: #fff;
+    background-color: #2F0F72;
+    border: solid #2F0F72;
+    border-radius: 25px;
+    font-size: .9em;
+    padding: .2em .5em;
+    text-transform: uppercase;
+    transition: .8s;
+    transform: scale(.9);
+  }
+
+  .btnAcesse:hover {
+    cursor: pointer;
+    transform: scale(1.0);
+    text-decoration: underline;
+  }
+
+
+/* ==============================================
+- ÁREA EVENTOS HOME
+============================================== */
+  .eventos_home-Princiapal{
+    background-color: #FFF;
+  }
+
+ /* ==============================================
+ - CARROSSEL EVENTOS HOME
+ ============================================== */
+  .mySlides {display: none}
+
+  img {vertical-align: middle;}
+
+  .slideshow-container {
+    position: relative;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin: -22px 20px 0px 20px;
+    color: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .eventos_home-Princiapal:hover .prev,
+  .eventos_home-Princiapal:hover .next{
+    color: #FF8725;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .divDot{
+    text-align:center;
+    user-select: none;
+    padding: 20px;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .activeEventosHome, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    opacity: .4;
+    animation: 1.5s fade forwards;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  
+ /* ==============================================
+ - CONTEÚDO EVENTOS HOME
+ ============================================== */
+  .eventos_home{
+    padding: 50px 15px;
+  }
+
+  .container-eventos_home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img_materia{
+    width: 450px;
+    margin: 0px 25px;
+  }
+
+  .img_materia img{
+    width: 100%;
+  }
+
+  .img_materia h1{
+    background-color: #FF8725;
+    color: #FFF;
+    padding: 7px 20px;
+  }
+
+  .info-eventos_home{
+    width: 450px;
+    margin: 10px 50px;
+    padding: 10px 10px;
+  }
+
+  .info-eventos_home h2{
+    color: #FF8725;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .info-eventos_home h5{
+    color: #49326B;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 8px 0px;
+  }
+
+  .info-eventos_home p{
+    font-size: 1.5em;
+    color: #FF8725;
+    margin-bottom: 15px;
+  }
+
+  .info-eventos_home h3{
+    color: #49326B;
+    transition: .8s;
+    text-transform: uppercase;
+  }
+
+  .info-eventos_home h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .verCalendario{
+    background-color: #49326B;
+    border-radius: 5px;
+    border: solid #49326B;
+    color: #FFFFFF;
+    font-size: .9em;
+    margin: 15px 0px;
+    padding: 7px 20px;
+  }
+
+  .verCalendario:hover{
+    box-shadow: 0px 4px 15px #49326B99;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+
+
+/* ==============================================
+- PÁGINA JUQUERY
+============================================== */
+
+/* ==============================================
+- ÁREA HISTÓRIA
+============================================== */
+  .historia, .atualidades,
+  .arquitetura, .sobre,
+  .adm, .loading{
+    max-width: 1280px;
+    padding: 40px 15px;
+    margin: auto auto;
+  }
+
+  .historia h1,
+  .atualidades h1,
+  .arquitetura h1,
+  .sobre h1,
+  .adm h1,
+  .loading h1{
+    color: #49326B;
+    text-align: center;
+    letter-spacing: 1.5px;
+  }
+
+  .historia h2{
+    color: #49326B;
+    font-size: 1.7em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 10px 0px 40px 0px;
+  }
+
+  .container-historia{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 80px;
+  }
+
+  .container-historia + .container-historia,
+  .container-atualidade + .container-atualidade,
+  .container-arquitetura + .txtArq{
+    padding: 30px 0px 20px 0px;
+    border-top: dashed #353535;
+  }
+
+  .reverse{
+    flex-direction: row-reverse;
+  }
+
+  .img_historia{
+    margin: 25px;
+  }
+
+  .img_historia img{
+    width: 375px;
+  }
+
+  .info-historia{
+    padding: 25px;
+  }
+
+  .info-historia h1{
+    text-align: left;
+    color: #FF8725;
+  }
+
+  .info-historia .title-Hist{
+    font-size: 2em;
+    color: #FF8725;
+    margin-bottom: 15px;
+  }
+
+
+/* ==============================================
+- ÁREA ATUALIDADES/ARQUITETURA
+============================================== */
+  .container-atualidade,
+  .container-arquitetura{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .imgAtuali, .info-atualidade,
+  .imgArq, .info-arquitetura{
+    margin: 20px 7px;
+    text-align: left;
+  }
+
+  .imgAtuali img,
+  .info-atualidade h2,
+  .txtArq h2, .imgArq img{
+    width: 100%;
+    color: #49326B;
+    padding: 0px 10px;
+  }
+
+  .txtArq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .txtArq h2{
+    width: 90%;
+    margin-top: 15px !important;
+    padding: 0px 15px !important;
+  }
+
+  .dateTextAtuali,
+  .fonte{
+    font-size: 1.15em;
+    color: #FF8725;
+  }
+
+  .fonte a{
+    color: #FF8725;
+  }
+
+  .info-atualidade p,
+  .info-arquitetura p{
+    padding: 10px;
+  }
+
+  .infoTextAtuali,
+  .infoTextArq{
+    font-size: 1.25em;
+    line-height: 1em;
+  }
+
+  .info-atualidade .dateTextAtuali{
+    color: #FF8725;
+    padding: 0px 10px;
+  }
+
+/* ==============================================
+- ÁREA ARQUITETURA
+============================================== */
+  .txtArq h1{
+    width: 90%;
+    margin: auto auto;
+  }
+
+  .info-arquitetura h2{
+    padding: 0px 10px;
+    color: #FF8725;
+    width: 100%;
+  }
+
+
+/* ==============================================
+- PÁGINA ARTISTAS
+============================================== */
+  .artistas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    min-height: 62vh;
+    max-height: auto;
+    margin: auto auto;
+    padding: 20px 15px;
+  }
+
+  .artistas h1,
+  .eventos h1,
+  .galeria h1{
+    color: #49326B;
+    padding: 25px;
+    width: 100%;
+  }
+
+  .align-Title{
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .align-Title h2{
+    width: 85%;
+    color: #49326B;
+  }
+
+  .viewContent{
+    width: auto;
+    color: #000;
+    margin: auto auto;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .8s;
+    transform: scale(1.1);
+  }
+
+  .viewContent:hover,
+  .viewContent:focus{
+    transform: scale(1.15);
+    text-decoration: underline;
+  }
+
+  .content-artistas + .align-Title{
+    margin: 50px 0px 0px 0px;
+  }
+
+  .content-artistas{
+    width: 98%;
+    margin: 30px;
+    padding: 40px 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+  }
+
+  .section-artista {
+    scroll-snap-align: start;
+  }
+
+  .artista{
+    width: 230px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .divImg{
+    width: 90%;
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .divImg img{
+    width: 100%;
+    border-radius: 10px;  
+  }
+
+  .txtArtistas{
+    display: grid;
+    grid-template-columns: 122.5px 77.5px;
+    padding: 10px;
+  }
+
+  .titleMusica,
+  .nomeArtista{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+
+  .titleMusica{
+    font-weight: bold;
+    line-height: 2em;
+  }
+
+  .nomeArtista{
+    color: #353535;
+    line-height: 1.5em;
+  }
+
+  .btnPlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .artista .btnPlay a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #FF8725;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: auto auto;
+    user-select: none;
+    text-decoration: none;
+  }
+
+  .artista .btnPlay a i{
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+
+/* ==============================================
+- STYLE SCROLL ARTISTAS
+============================================== */
+  /* width */
+  .content-artistas::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* Track */
+  .content-artistas::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .content-artistas::-webkit-scrollbar-thumb {
+    background-color: #49326B99;
+    border-radius: 10px;
+  }
+
+
+/* ==============================================
+- STYLE IFRAME ARTISTAS
+============================================== */
+  .divIframe{
+    width: 100%;
+  }
+
+  iframe{
+    width: 100%;
+    height: 65vh;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: transparent;
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 90%; /* Could be more or less, depending on screen size */
+  }
+
+  .imgcontainer{
+    display: flex;
+    justify-content: right;
+  }
+
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    color: #ff0000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: #ff000069;
+    cursor: pointer;
+  }
+
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+/* ==============================================
+- PÁGINA LOADIN
+============================================== */
+  .loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .loadingImg{
+    margin: 20px;
+  }
+
+  .loadingImg img{
+    width: 130px;
+    height: 130px;
+    animation: 2s rodar infinite;
+  }
+
+  @keyframes rodar {
+    from {transform: rotate(0deg);}
+    to {transform:  rotate(365deg);}
+  }
+
+
+
+/* ==============================================
+- PÁGINA MÚSICAS / SHOWS
+============================================== */
+  .content-musicas,
+  .content-shows{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .musica,
+  .show{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px 5px;
+  }
+
+  .divImgMusica,
+  .divImgShow{
+    width: 90%;
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .divImgMusica img,
+  .divImgShow img{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .txtMusica,
+  .txtShow{
+    display: grid;
+    grid-template-columns: 122.5px 77.5px;
+    padding: 10px;
+  }
+
+  .Musica-title,
+  .Show-title,
+  .Artista-nome-Musica,
+  .Artista-nome-Show{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+
+  .Musica-title,
+  .Show-title{
+    font-weight: bold;
+    line-height: 2em;
+  }
+
+  .Artista-nome-Musica,
+  .Artista-nome-Show{
+    color: #353535;
+    line-height: 1.5em;
+  }
+
+  .btnMusica,
+  .btnShow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnMusica button,
+  .btnShow button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #FF8725;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: auto auto;
+    user-select: none;
+  }
+
+  .btnMusica button i,
+  .btnShow button i{
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+
+
+/* ==============================================
+- PÁGINA EVENTOS
+============================================== */
+  .eventos{
+    max-width: 1280px;
+    margin: auto auto;
+    padding: 20px 15px;
+  }
+
+  .aling-eventos{
+    display: flex;
+    justify-content: center;
+  }
+
+  .eventos_timeline{
+    width: 98%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .evento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    margin: 10px;
+    border-radius: 15px;
+  }
+
+  .img-evento{
+    height: 200px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-evento img{
+    min-height: 0%;
+    max-height: 98%;
+    min-width: 0%;
+    max-width: 98%;
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .content-eventos{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 30% 60%; 
+    grid-gap: 10%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-eventos{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .data-hora{
+    align-items: center;
+    margin: 0px 7px;
+  }
+
+  .dia_semana,
+  .mes{
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .dia_mes{
+    color: #49326B;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .horario{
+    padding: 5px 0;
+  }
+
+  .dados-evento{
+    width: 80%;
+    height: 100%;
+  }
+
+  .nome_evento p,
+  .ano p,
+  .localizacao p{
+    width: 98%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nome_evento,
+  .ano{
+    font-weight: bold;
+  }
+
+  .localizacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .localizacao i{
+    color: #FF8725;
+    padding: 0px 5px 0px 0px;
+  }
+
+  .btnEvento{
+    width: 100%;
+    padding: .5em .5em 10px .5em;
+  }
+
+  .btnEvento button,
+  .btnEvento a{
+    background-color: #FF8725;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px #D86608;
+    color: #FFF;
+    font-size: .9em;
+    padding: .6em 2em;
+    text-transform: uppercase;
+    transition: .8s;
+    transform: scale(.9);
+  }
+
+  .btnEvento button:hover,
+  .btnEvento a:hover {
+    cursor: pointer;
+    transform: scale(1.0);
+    text-decoration: underline;
+  }
+
+
+
+/* ==============================================
+- PÁGINA GALERIA
+============================================== */
+  .galeria{
+    max-width: 1280px;
+    margin: auto auto;
+    padding: 20px 15px;
+  }
+
+  .galeria h2{
+    padding: 10px 25px;
+    width: 100%;    
+    color: #49326B;
+  }
+
+  .content-galeria{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 15px 5px;
+    vertical-align: top;
+    padding: 10px;
+    margin: auto auto;
+  }
+
+  .divFoto{
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+
+  .foto{
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .foto img{
+    min-height: 0%;
+    max-height: 100%;
+    min-width: 0%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .legenda{
+    width: 100%;
+  }
+
+  .legenda .titleImg{
+    background-color: #FF8725;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 5px 0px;
+    padding: 10px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .legenda p{
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+
+
+/* ==============================================
+- PÁGINA SOBRE
+============================================== */
+  .sobre a{color: #FF8725;}
+
+  .container-sobre{
+    width: 91.5%;
+    margin: auto auto;
+  }
+
+  .align-container-sobre{
+    display: grid;
+    grid-template-columns: auto 45%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .textSobre{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .textSobre p,
+  .textSobre02 p{
+    text-align: justify;
+    padding-top: 5px;
+  }
+
+  .imgLogo{
+    width: 100%;
+    background: #49326B;
+    color: #FF8725;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 25px 50%;
+    user-select: none;
+  }
+
+
+/* ==============================================
+- ÁREA REDES
+============================================== */
+  .containerRedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sliderRedes {
+    overflow: hidden;
+    width: 300px;
+    height: auto;
+    margin: 20px;
+  }
+
+  #sliderRedes .scroll-container {
+    width: 300%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    left: 0;
+    animation: 30s sliderRedes infinite;
+  }
+
+  #sliderRedes .scroll-container img {
+    width: 33.3333333333%;
+    height: 100%;
+    float: left;
+  }
+
+  @keyframes sliderRedes {
+    0% {
+      left: 0;
+    }
+    45% {
+      left: 0;
+    }
+    50% {
+      left: -100%;
+    }
+    95% {
+      left: -100%;
+    }
+    100% {
+      left: -200%;
+    }
+  }
+
+  .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+  }
+
+  .redes p{
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color: #FF8725;
+  }
+
+  .redes button{
+    background-color: #49326B29;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    transition: all .5s;
+  }
+
+  .redes button:hover,
+  .redes button:focus{
+    box-shadow: 0px 2px 8px #363636;
+  }
+
+  .redes button p{
+    color: #FF8725;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .redes button i + p{
+    margin-left: 5px;
+  }
+
+  .redes button i{
+    font-size: 3em;
+  }
+
+  .redes .fa-youtube{color: #FF0000;}
+
+  .redes .fa-instagram{
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+/* ==============================================
+- PÁGINA ADMINISTRADOR
+============================================== */
+
+/* ==============================================
+- TELA ADM PRINCIPAL
+============================================== */
+  .logoAdm, .logoLoading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adm .mensageLinks{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .adm .mensageLinks h2{
+    color: #49326B;
+  }
+
+  .adm .mensageLinks h3{
+    background: #49326B;
+    color: #FF8725;
+    padding: 20px 20px 5px 20px;
+  }
+
+  #AdmContent{
+    background-color: #49326B;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px 20px 20px;
+    margin: auto auto;
+    z-index: 1;
+  }
+
+  #AdmContent ul{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px 20px;
+  }
+
+  #AdmContent ul .divLi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #AdmContent ul li{
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  #AdmContent ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  #AdmContent ul li a:hover,
+  #AdmContent ul li a:focus{
+    font-weight: bold;
+    border-bottom: solid #FF8725;
+  }
+
+  #AdmContent .dropdown-contentAdm{
+    min-width: 175px;
+  }
+
+  #AdmContent .dropdown-contentAdm a{
+    padding: 8px 0px;
+  }
+
+
+/* ==============================================
+- TELA FORM ADM 
+============================================== */
+  .adm h2{
+    width: 91.5%;
+    color: #FF8725;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  .adm form,
+  .adm .publiContent{
+    width: 91.5%;
+    border-radius: 12px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .adm .formPubli{
+    width: 91.5%;
+    /* border: 2px solid #49326B; */
+    border-radius: 12px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .adm label{
+    margin: 5px 0px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+
+  .adm input,
+  .adm textarea{
+    margin: 5px 0px;
+    padding: 8px 10px;
+  }
+
+  .adm input[type=text]{
+    min-width: 225px;
+
+  }
+
+  .adm select,
+  .adm input[type=time]{
+    margin: 5px 7px;
+    padding: 5px;
+  }
+
+  .adm option{
+    text-align: center;
+  }
+
+  .adm .align-obj,
+  .adm .align-obj-bold{
+    display: inline;
+    align-items: center;
+    padding: 0px 10px;
+  }
+
+  .adm .align-obj-bold{
+    color: red;
+    font-weight: bold;
+  }
+
+  .adm textarea{
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .adm .divEnviar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .adm input[type=submit]{
+    background: #FF8725;
+    border: none;
+    border-radius: 1.5px;
+    color: #FFF;
+    margin: 10px 17px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    transition: 1s all;
+  }
+
+  .adm input[type=submit]:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px #FF8725;
+  }
+
+  .divPubli{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 15px 5px;
+  }
+
+  .divPubli .ImgPubli{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+
+  .divPubli .ImgPubli img{
+    min-height: 0%;
+    max-height: 100%;
+    min-width: 0%;
+    max-width: 100%;
+  }
+
+  .divPubli .btnPubli{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divPubli .btnEdt,
+  .divPubli .btnExcl,
+  .divEnviar .btnExcl{
+    background: #f35c05;
+  }
+
+  .divPubli .btnEdt:hover,
+  .divPubli .btnExcl:hover,
+  .divEnviar .btnExcl:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px #f35c05;
+  }
+
+  .divPubli .btnPublicar{
+    background: #FF8725;
+  }
+
+  .divPubli .btnPublicar:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px #FF8725;
+}
+
+  .divPubli .btnPublicar,
+  .divPubli .btnEdt,
+  .divPubli .btnExcl,
+  .divEnviar .btnExcl{
+    border: none;
+    border-radius: 1.5px;
+    color: #FFF;
+    margin: 2px;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 1s all;
+  }
+
+
+
+/* ==============================================
+- RODAPÉ
+============================================== */
+  footer{
+    width: 100%;
+    min-height: 200px;
+    background: #49326B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 2px solid #a1a1a1;
+  }
+
+  footer .boxs{
+    width: 33vw;
+    min-height: 150px;
+    padding: 20px;
+  }
+
+  footer .boxs:nth-child(4){
+    width: 400px;
+  }
+
+  .boxs h2{
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  .boxs ul li{
+    margin: 10px 0px;
+    list-style: none;
+  }
+
+  .boxs ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 14px;  
+  } 
+  
+  .boxs ul li a:hover{  
+    color: #fff;
+  }
+
+  .boxs p{
+    color: #fff;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  .sobreRodape{
+    color: #fff;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+
+  .footer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background: #49326B;
+    align-items: center;
+  }
+
+  .footer h4{
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .footer .sociais{
+    display: flex;
+  }
+
+  .sociais .social{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #FFF;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .3s linear;
+  }
+
+  .sociais .social a{
+    color: #49326B;
+    font-size: 1.5em;
+    transition: color .3s linear;
+  }
+
+  .sociais .social:hover{
+    background: #FFF;
+  }
+
+  .sociais .social:hover a{
+    color: #49326BF9;
+  }
+
+
+
+/* ==============================================
+- LAYOUT TABLET
+============================================== */
+@media only screen and (max-width: 950px){
+
+/* ==============================================
+- PÁGINA SOBRE
+============================================== */
+  .textSobre p,
+  .textSobre02 p{
+    padding: 5px 0px 10px 0px;
+  }
+
+  .imgLogo{
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgLogo img,
+  .imgLogo h2{
+    margin: 0 auto;
+  }
+
+  .imgLogo img{
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+/* ==============================================
+- LAYOUT PC/TABLET
+============================================== */
+@media only screen and (max-width: 900px){
+ /* ==============================================
+ - MENU
+ ============================================== */
+  header{
+    padding: 0 40px 0 40px;
+  }
+
+  header .menu-btn i{
+    margin-top: -7px;
+    display: block;
+    float: right;
+  }
+
+  header ul{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    background-color: #49326BF9;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin: 0px;
+  }
+
+  header ul.open{
+    left: 0;
+  }
+
+  header ul li{
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fixando header ul{
+    overflow: auto !important;
+    padding-bottom: 50px;
+  }
+
+  .fixando {
+    animation: fixar .5s linear forwards;
+    visibility: visible;
+  }
+
+  .dropdown-content {
+    background-color: #49326BF9;
+    box-shadow: none;
+  }
+}
+
+
+
+/* ==============================================
+- LAYOUT TABLET
+============================================== */
+@media only screen and (max-width: 768px){
+
+ /* ==============================================
+ - HOME
+ ============================================== */
+
+ /* ==============================================
+ - ÁREA HISTÓRIA HOME
+ ============================================== */
+  .container-historia_home{
+    flex-direction: column-reverse;
+  }
+
+  .info-historia_home{
+    width: 90%;
+  }
+
+  .img_historia_home{
+    padding: 20px;
+  }
+
+ /* ==============================================
+ - ÁREA NOTICIAS HOME
+ ============================================== */
+  .noticias_timeline{
+    width: 80%;
+    grid-template-columns: auto auto;
+  }
+
+ /* ==============================================
+ - ÁREA EVENTOS HOME
+ ============================================== */
+
+ /* ==============================================
+ - CARROSSEL EVENTOS HOME
+ ============================================== */
+  .prev, .next {
+    color: #FF8725;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+ /* ==============================================
+ - CONTEÚDO EVENTOS HOME
+ ============================================== */
+  .container-eventos_home{
+    flex-direction: column;
+  }
+
+  .img_materia{
+    padding: 25px 20px 20px 20px;
+  }
+
+  .info-eventos_home{
+    width: 90%;
+  }
+
+
+/* ==============================================
+- PÁGINA SOBRE
+============================================== */
+  .align-container-sobre{
+    grid-template-columns: auto;
+  }
+
+
+/* ==============================================
+- PÁGINA JUQUERY
+============================================== */
+
+/* ==============================================
+- ÁREA HISTÓRIA
+============================================== */
+  .container-historia{
+    flex-direction: column;
+    margin: 20px 60px;
+  }
+
+  .img_historia img{
+    width: 300px;
+  }
+
+
+/* ==============================================
+- ÁREA ATUALIDADES/ARQUITETURA
+============================================== */
+  .container-atualidade,
+  .container-arquitetura{
+    grid-template-columns: 80%;
+    padding-bottom: 10px;
+  }
+
+  .imgAtuali{
+    margin: 15px 7px 7px 7px;
+  }
+
+  .info-Atualidade,
+  .imgArq,
+  .info-arquitetura{
+    margin: 10px 7px;
+  }
+
+
+/* ==============================================
+- ÁREA ARQUITETURA
+============================================== */
+  .txtArq{
+    padding: 15px 0px;
+  }
+
+  .txtArq h1{
+    width: 78%;
+  }
+
+
+/* ==============================================
+- PÁGINA ARTISTAS
+============================================== */
+  .artista{
+    margin: 5px;
+  }
+
+/* ==============================================
+- PÁGINA MÚSICAS / SHOWS
+============================================== */
+  .content-musicas,
+  .content-shows{
+    grid-template-columns: auto auto auto;
+  }
+
+  .musica,
+  .show{
+    margin: 5px;
+  }
+
+
+/* ==============================================
+- PÁGINA EVENTOS
+=============================================== */
+  .eventos h1,
+  .artistas h1,
+  .galeria h1{
+    color: #49326B;
+    padding: 15px;
+  }
+
+
+  .content-eventos{
+    display: grid;
+    grid-template-columns: 100%; 
+    grid-template-rows: auto auto; 
+    margin: 0px 0px 20px 0px;
+  }
+
+  .evento{
+    width: 220px;
+  }
+
+  .info-eventos{
+    padding: 5px;
+  }
+
+  .dia_mes{
+    color: #49326B;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .horario{
+    padding: 2.5px 0;
+  }
+
+  .btnEvento button{
+    padding: .5em 2em;
+  }
+
+
+/* ==============================================
+- PÁGINA GALERIA
+============================================== */
+  .content-galeria{
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px 5px;
+  }
+
+
+/* ==============================================
+- ÁREA REDES
+============================================== */
+  .containerRedes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sliderRedes {
+    margin: 20px 0px;
+  }
+
+
+/* ==============================================
+- RODAPÉ
+============================================== */
+  footer{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .boxs{
+    width: 100vw;
+  }
+
+  footer .boxs:nth-child(4){
+    width: 90vw;
+  }
+
+  .boxs p{
+    text-align: center;
+  }
+
+
+/* ==============================================
+- PÁGINA ADMINISTRADOR
+============================================== */
+  #AdmContent ul .divLi{
+    flex-direction: column;
+  }
+
+  .divPubli{
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px 5px;
+  }
+}
+
+
+/* ==============================================
+- LAYOUT MOBILE - 500px
+============================================== */
+@media only screen and (max-width: 500px){
+  header .logo h2{
+    display: none;
+
+  }
+}
+
+
+/* ==============================================
+- LAYOUT MOBILE L - 425px
+============================================== */
+@media only screen and (max-width: 425px){
+
+ /* ==============================================
+ - HOME
+ ============================================== */
+
+ /* ==============================================
+ - ÁREA CARROSSEL HOME
+ ============================================== */
+
+
+ /* ==============================================
+ - ÁREA HISTÓRIA HOME
+ ============================================== */
+  .info-historia_home{
+    width: 100%;
+    margin: 10px 50px
+  }
+
+  .img_historia_home{
+    width: 100%;
+  }
+
+ /* ==============================================
+ - ÁREA NOTICIAS HOME
+ ============================================== */
+  .noticias_timeline{
+    width: 100%;
+    grid-template-columns: auto;
+  }
+
+  .noticia{
+    width: 85%;
+    margin: 10px auto;
+  }
+
+ /* ==============================================
+ - ÁREA EVENTOS HOME
+ ============================================== */
+
+ /* ==============================================
+ - CONTEÚDO EVENTOS HOME
+ ============================================== */
+  .img_materia{
+    width: 100%;
+  }
+
+  .info-eventos_home{
+    width: 100%;
+    padding: 15px;
+  }
+
+
+/* ==============================================
+- PÁGINA JUQUERY
+============================================== */
+
+/* ==============================================
+- ÁREA HISTÓRIA
+============================================== */
+  .historia h2{
+    letter-spacing: 0px;
+  }
+
+  .container-historia{
+    margin: 20px 0px;
+  }
+
+  .img_historia img{
+    width: 250px;
+  }
+
+  .info-historia{
+    padding: 15px;
+  }
+
+  .historia hr{
+    margin: 0px 10px;
+  }
+
+
+/* ==============================================
+- ÁREA ATUALIDADES/ARQUITETURA
+============================================== */
+  .container-atualidade,
+  .container-arquitetura{
+    grid-template-columns: 100%;
+    padding-bottom: 10px;
+  }
+
+
+/* ==============================================
+- ÁREA ARQUITETURA
+============================================== */
+  .txtArq{
+    padding: 15px 0px;
+  }
+
+  .txtArq h1{
+    width: 97%;
+  }
+
+
+/* ==============================================
+- PÁGINA MÚSICAS / SHOWS
+============================================== */
+  .content-musicas,
+  .content-shows{
+    grid-template-columns: auto auto;
+    padding: 5px;
+  }
+
+  .musica,
+  .show{
+    width: 175px;
+    margin: 10px 5px;
+  }
+
+  .divImgMusica,
+  .divImgShow{
+    width: 100%;
+  }
+
+  .txtMusica,
+  .txtShow{
+    grid-template-columns: 150px;
+  }
+
+  .btnMusica,
+  .btnShow{
+    display: none;
+    visibility: hidden;
+  }
+
+
+ /* ==============================================
+ - PÁGINA EVENTOS
+ ============================================== */
+  .eventos_timeline{
+    width: 100%;
+    grid-template-columns: auto auto;
+  }
+
+  .data-hora{
+    margin: 0px 5px;
+  }
+
+  .dados-evento{
+    width: 70%;
+  }
+
+  .evento{
+    width: 165px;
+  }
+
+
+/* ==============================================
+- PÁGINA GALERIA
+============================================== */
+  .content-galeria{
+    grid-template-columns: 50% 50%;
+  }
+
+
+/* ==============================================
+- PÁGINA SOBRE
+============================================== */
+  .container-sobre{
+    width: 100%;
+    margin: auto auto;
+  }
+
+  .imgLogo{
+    font-size: 1.5em;
+    gap: 7px;
+  }
+
+  .imgLogo img{ 
+    width: 105px;
+    height: 105px;
+  }
+
+/* ==============================================
+- ÁREA REDES
+============================================== */
+  .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .redes button{
+    margin: 7px;
+    padding: 12px;
+  }
+
+
+/* ==============================================
+- PÁGINA ADMINISTRADOR
+============================================== */
+  .adm h2{
+    width: 100%;
+    padding: 20px 10px 10px 10px;
+  }
+
+  .adm form{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .adm .align-obj{
+    padding: 0px 5px;
+  }
+
+  .divPubli{
+    grid-template-columns: 50% 50%;
+  }
+}
+
+
+/* ==============================================
+- LAYOUT MOBILE S - 320px
+============================================== */
+@media only screen and (max-width: 320px){
+/* ==============================================
+- PÁGINA MÚSICAS / SHOWS
+============================================== */
+  .musica,
+  .show{
+    width: 145px;
+    margin: 10px 5px;
+  }
+
+  .txtMusica,
+  .txtShow{
+    grid-template-columns: 135px;
+  }
+
+
+ /* ==============================================
+ - PÁGINA EVENTOS
+ ============================================== */
+  .evento{
+    width: 145px;
+    margin: 7px 3px;
+  }
+
+  .btnEvento button{
+    background-color: #FF8725;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px #D86608;
+    color: #FFF;
+    font-size: .9em;
+    padding: .6em 1em;
+  }
+
+/* ==============================================
+- ÁREA REDES
+============================================== */
+  #sliderRedes {
+    width: 100%;
+  }
+
+/* ==============================================
+- PÁGINA ADMINISTRADOR
+============================================== */
+  
+  .adm{
+    padding: 40px 5px;
+  }
+}
